@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">Good Morning</h1>
+    <script>
+        var title = document.getElementById('title').innerHTML = 'Hello, DOM!';
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="item">nsjh</p>
+    <p class="item">bnvdjhie</p>
+    <h1 class="item">vnefjeifj</h1>
+    <h3 class="item">UDU</h3>
+    <script>
+var items = document.querySelectorAll(".item");
+items.forEach(function(item) {
+  item.textContent = "Updated item";
+});
+
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="text">Hoc lap trinh web</h1>
+    <script>
+        document.getElementById('text').style.color="red";
+    </script>
+</body>
+</html> <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+ <body>
+  <ul id="list">Danh sách môn học kì 3</ul>
+  <script>
+    var newItem = document.createElement("li");
+    newItem.textContent = "Toán rời rạc";
+    var list = document.getElementById("list");
+    list.appendChild(newItem);
+  </script>
+ </body>
+ </html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 id="remove-me">Hãy xóa tôi đi!</h1>
+  <script>
+    var element = document.getElementById("remove-me");
+if (element) {
+  element.remove();
+}
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="image" src="anh2.png">
+    <script>
+var imageElement = document.getElementById("image");
+if (imageElement) {
+  imageElement.src = "anh1.png";
+}
+
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click me!</button>
+    <script>
+var button = document.getElementById("btn");
+if (button) {
+  button.addEventListener("click", function() {
+    alert("Hello!");
+  });
+}
+
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bài 7</h1>
+    <p>Nguyễn Quốc Vượng</p>
+    <p>Phạm Hải Đăng</p>
+    <p>Học viện Công nghệ Bưu chính Viễn thông</p>
+    <script>
+var paragraphs = document.querySelectorAll("p");
+paragraphs.forEach(function(paragraph) {
+  paragraph.textContent = "Updated paragraph";
+});
+
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="table-container"></div>
+    <script>
+
+var table = document.createElement("table");
+table.style.borderCollapse = "collapse";
+
+for (var i = 0; i < 3; i++) {
+  var row = document.createElement("tr");
+
+  for (var j = 0; j < 3; j++) {
+
+    var cell = document.createElement("td");
+    cell.style.border = "1px solid black";
+    cell.style.padding = "8px";
+    cell.textContent = "PTIT";
+
+    row.appendChild(cell);
+  }
+  table.appendChild(row);
+}
+var container = document.getElementById("table-container");
+if (container) {
+  container.appendChild(table);
+}
+
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Nguyễn Quốc Vượng</p>
+    </div>
+    <div>
+        <p>Phạm Hải Đăng</p>
+    </div>
+    <div>
+        <p>Phạm Trung Hiếu</p>
+    </div>
+    <div>
+        <p>Nguyễn Đức Bình</p>
+    </div>
+    <script>
+var divs = document.querySelectorAll("div");
+var count = divs.length;
+alert("Số lượng phần tử <div> trên trang: " + count);
+
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+        <h1 id="tieuDe">Xin chào!</h1>
+        <p id="test">Đây là ví dụ thao tác với DOM.</p>
+    </div>
+    <script>
+        // Lấy nội dung bên trong HTML
+        var noiDung = document.getElementById("main").innerHTML;
+     
+        // Thiết lập nội dung bên trong thẻ HTML
+        var divMain = document.getElementById("main");
+        divMain.innerHTML = "<p>Thêm ND thành công đây nè!</p>";
+    </script>
+</body>
+</html>
